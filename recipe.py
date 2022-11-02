@@ -67,6 +67,16 @@ while True:
     elif(choice==3):
 
         print('search recipe')
+        
+        category = input('enter category to search')
+        
+        sql = "SELECT `id`,`name`,`category`,`taste`,`price` FROM `recipe` WHERE `category` = '"+category+"'"
+
+        mycursor.execute(sql)
+
+        result = mycursor.fetchall()
+
+        print(result)
 
     elif(choice==4):
 
