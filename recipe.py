@@ -81,6 +81,26 @@ while True:
     elif(choice==4):
 
         print('update recipe')
+        
+        name = input('enter the name of the recipe to be updated : ')
+
+        category = input('enter the category such as veg or non-veg : ')
+
+        taste = input('enter the taste you need : ')
+
+        price = input('enter the price : ')
+
+       
+
+       
+        sql = "UPDATE `recipe` SET `category`='"+category+"',`taste`='"+taste+"',`price`='"+price+"' WHERE `category`='"+name+"'"
+
+        mycursor.execute(sql)
+
+        mydb.commit()
+
+        print('Updated sucessfully !!!')
+
 
     elif(choice==5):
 
