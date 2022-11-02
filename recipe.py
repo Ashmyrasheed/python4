@@ -17,8 +17,9 @@ while True:
     print("5 delete a recipe")
     print("6 total price of food")
     print("7 total price for each category")
+    print('8 Starting letter of name of recepi ')
 
-    print("8 exit")
+    print("9 exit")
 
    
 
@@ -145,4 +146,16 @@ while True:
     
         print(result)
     elif(choice == 8):
+        print('Starting letter of name of recepi')
+
+        a = input('Enter the first character of the name : ')
+
+        sql = "SELECT * FROM `recipe` WHERE `name` LIKE '%"+a+"%'"
+
+        mycursor.execute(sql)
+
+        result = mycursor.fetchall()
+
+        print(result)
+    elif(choice == 9):
         break
