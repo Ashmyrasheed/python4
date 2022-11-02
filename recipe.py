@@ -16,8 +16,9 @@ while True:
 
     print("5 delete a recipe")
     print("6 total price of food")
+    print("7 total price for each category")
 
-    print("7 exit")
+    print("8 exit")
 
    
 
@@ -132,5 +133,16 @@ while True:
 
         print(result)
     elif(choice==7):
+         
 
+        print('total price for each category')
+
+        sql = "SELECT `category`, SUM(`price`) FROM `recipe` GROUP BY `category`"
+
+        mycursor.execute(sql)
+
+        result = mycursor.fetchall()
+    
+        print(result)
+    elif(choice == 8):
         break
