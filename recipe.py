@@ -93,7 +93,7 @@ while True:
        
 
        
-        sql = "UPDATE `recipe` SET `category`='"+category+"',`taste`='"+taste+"',`price`='"+price+"' WHERE `category`='"+name+"'"
+        sql = "UPDATE `recipe` SET `category`='"+category+"',`taste`='"+taste+"',`price`='"+price+"' WHERE `name`='"+name+"'"
 
         mycursor.execute(sql)
 
