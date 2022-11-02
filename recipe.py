@@ -15,8 +15,9 @@ while True:
     print("4 update the recipe")    
 
     print("5 delete a recipe")
+    print("6 total price of food")
 
-    print("6 exit")
+    print("7 exit")
 
    
 
@@ -118,5 +119,18 @@ while True:
             print("data deleted succesfully")
 
     elif(choice==6):
+        
+        
+
+        print('total price')
+
+        sql = 'SELECT SUM(`price`) FROM `recipe` '
+
+        mycursor.execute(sql)
+
+        result = mycursor.fetchall()
+
+        print(result)
+    elif(choice==7):
 
         break
