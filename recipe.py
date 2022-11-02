@@ -54,6 +54,15 @@ while True:
     elif(choice==2):
 
         print('view recipe')
+    
+        
+        sql = 'SELECT * FROM `recipe`'
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        for i in result:
+            print(i)
+
+        print('view recipe')
 
     elif(choice==3):
 
